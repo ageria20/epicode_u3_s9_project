@@ -41,6 +41,17 @@ class GalleryGridItem extends Component {
               })}
             </Row>
           </Carousel.Item>
+          <Carousel.Item>
+            <Row>
+              {this.state.films.slice(0, 4).map(film => {
+                return (
+                  <Col md={3} key={film.imdbID}>
+                    <img className="img-fluid" src={film.Poster} alt={film.Title} />
+                  </Col>
+                );
+              })}
+            </Row>
+          </Carousel.Item>
         </Carousel>
       )
     );
