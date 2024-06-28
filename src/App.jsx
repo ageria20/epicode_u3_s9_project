@@ -1,8 +1,7 @@
-
-import './App.css';
-import MyNav from './component/MyNav';
-import Home from './component/Home'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import MyNav from "./component/MyNav";
+import Home from "./component/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

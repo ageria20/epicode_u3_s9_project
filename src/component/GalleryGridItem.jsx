@@ -8,7 +8,7 @@ class GalleryGridItem extends Component {
   };
 
   fetchFilm = () => {
-    this.setState({ isLoading: true });
+    // this.setState({ isLoading: true });
     fetch("http://www.omdbapi.com/?apikey=8e8de469&s=" + this.props.filmName)
       .then(resp => {
         if (resp.ok) return resp.json();
@@ -32,10 +32,10 @@ class GalleryGridItem extends Component {
         <Carousel>
           <Carousel.Item>
             <Row>
-              {this.state.films.map(film => {
+              {this.state.films.slice(0, 6).map(film => {
                 return (
-                  <Col md={3} key={film.imdbID}>
-                    <img src={film.Poster} alt={film.Title} />
+                  <Col md={2} key={film.imdbID}>
+                    <img className="img-fluid" src={film.Poster} alt={film.Title} />
                   </Col>
                 );
               })}

@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import GalleryGridItem from "./GalleryGridItem";
+import Footer from "./Footer";
 
 const Home = props => {
   return (
@@ -52,12 +53,13 @@ const Home = props => {
       </Container>
       <Container>
         <h3 className="mt-3">Watch it Again</h3>
-        <GalleryGridItem filmName={"harry"} />
+        <GalleryGridItem filmName={"game"} />
       </Container>
       <Container>
         <h3 className="mt-3">New Realease</h3>
-        <GalleryGridItem filmName={"harry"} />
+        <GalleryGridItem filmName={"hobbit"} />
       </Container>
+      <Footer />
     </>
   );
 };
