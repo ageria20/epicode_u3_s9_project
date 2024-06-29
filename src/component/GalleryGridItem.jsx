@@ -29,22 +29,29 @@ class GalleryGridItem extends Component {
   render() {
     return (
       this.state.films.length > 0 && (
-        <Carousel>
-          {this.state.films.map(carouselItem => {
-            return (
-              <Carousel.Item>
-                <Row>
-                  {this.state.films.slice(0, 6).map(film => {
-                    return (
-                      <Col md={2} key={film.imdbID}>
-                        <img className="img-fluid" src={film.Poster} alt={film.Title} />
-                      </Col>
-                    );
-                  })}
-                </Row>
-              </Carousel.Item>
-            );
-          })}
+        <Carousel fade="true">
+          <Carousel.Item>
+            <Row>
+              {this.state.films.slice(0, 4).map(film => {
+                return (
+                  <Col md={3} key={film.imdbID}>
+                    <img className="img-fluid" src={film.Poster} alt={film.Title} />
+                  </Col>
+                );
+              })}
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Row>
+              {this.state.films.slice(7, 11).map(film => {
+                return (
+                  <Col md={3} key={film.imdbID}>
+                    <img className="img-fluid" src={film.Poster} alt={film.Title} />
+                  </Col>
+                );
+              })}
+            </Row>
+          </Carousel.Item>
         </Carousel>
       )
     );
